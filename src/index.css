@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --darkModeBgColor: #000;
+  --lightModeBgColor: #fff;
+  background-color: var(--darkModeBgColor);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn {
+  min-width: 55px;
+  height: 30px;
+  padding: 5px;
+  margin: 2px;
+  background-color: aqua;
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.calculatorScreen{
+  margin: 100px;
+  width: auto;
+  height: 30px;
+  background-color: aqua;
+}
+.calculatorContainer{
+  min-height: 95vh;
+  justify-content: center;
+  width: 40%;
+  border: 1px solid grey;
+  text-align: center;
+  margin-left: 30%;
+}
+.top {
+  display: flex;
+  height: 250px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.display {
+  font-size: 130px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.bottom {
+  position: absolute;
+  width: 200px;
+  height: 5px;
+  background: white;
+  bottom: 10px;
+  left: 50%;
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+
+.Button {
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 25px;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+  transition: filter 0.3s ease-in;
+}
+
+.Button:active,
+.Button:focus {
+  filter: brightness(120%);
+}
+
+.Button.zero {
+  border-radius: 57.5px;
+  position: relative;
+}
+
+/* .Button.function {
+  color: black;
+  background: #a5a5a5;
+} */
