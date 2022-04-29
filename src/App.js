@@ -16,9 +16,9 @@ function App() {
   return (
     <div className={'App' + selectMode}>
     <header className="App-header">
-      <button className={'btn ' + 'App' + selectMode} onClick={toggleTheme}>Light Theme</button>
-      <button className={'btn ' + 'App' + selectMode} onClick={toggleTheme}>Dark Theme</button>
-      <button className={'btn ' + 'App' + selectMode} onClick={toggleScientific}>{isScientific? 'Scientific OFF': 'Scientific ON'}</button>
+      <button className={'btn App' + selectMode} onClick={toggleTheme}>Light Theme</button>
+      <button className={'btn App' + selectMode} onClick={toggleTheme}>Dark Theme</button>
+      <button className={'btn App' + selectMode} onClick={toggleScientific}>{isScientific? 'Scientific OFF': 'Scientific ON'}</button>
     </header>
     <Calculator isScien={isScientific}/>
   </div>

@@ -13,7 +13,9 @@ const Calculator = ({isScien}) => {
         const fn = parseFloat(n1);
         const sn = parseFloat(n2);
         if(operator === '+') return fn + sn;
-        if(operator === '-') return fn - sn;
+        if(operator === '-'){
+            return fn - sn;   
+        } 
         if(operator === '/') {
             if(sn !== 0) {
                 return fn / sn;
@@ -21,7 +23,7 @@ const Calculator = ({isScien}) => {
                 return 0;
             }
         }
-        if(operator == '*') return fn * sn;
+        if(operator === '*') return fn * sn;
     }
     
     const onKeyPress = (content, type) => () => {
@@ -107,7 +109,7 @@ const Calculator = ({isScien}) => {
         <Button onButtonClick={onKeyPress} content="4" type="number"/>
         <Button onButtonClick={onKeyPress} content="5" type="number"/>
         <Button onButtonClick={onKeyPress} content="6" type="number"/>
-        <Button onButtonClick={onKeyPress} content="−" type="operator" />
+        <Button onButtonClick={onKeyPress} content="-" type="operator" />
         <Button onButtonClick={onKeyPress} content="7" type="number"/>
         <Button onButtonClick={onKeyPress} content="8" type="number"/>
         <Button onButtonClick={onKeyPress} content="9" type="number"/>
