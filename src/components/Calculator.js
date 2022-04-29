@@ -12,9 +12,9 @@ const Calculator = ({isScien}) => {
     const calculate = (n1, operator, n2) => {
         const fn = parseFloat(n1);
         const sn = parseFloat(n2);
-        if(operator == '+') return fn + sn;
-        if(operator == '-') return fn - sn;
-        if(operator == '/') {
+        if(operator === '+') return fn + sn;
+        if(operator === '-') return fn - sn;
+        if(operator === '/') {
             if(sn !== 0) {
                 return fn / sn;
             }else{
@@ -48,7 +48,7 @@ const Calculator = ({isScien}) => {
             setFirstValue(display);
             setOperator(content);
         }
-        
+
         if(type === 'calculate') {
             let secondValue = display;
             if(firstValue){
